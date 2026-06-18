@@ -57,3 +57,23 @@ a {
   transition-duration: 150ms;
   transition-timing-function: ease;
 }
+
+/* ─── Cursor de elementos clicáveis ────────
+   O Tailwind v4 deixa <button> com cursor: default. Devolvemos o
+   cursor de "mãozinha" (pointer) para tudo que é clicável. */
+
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+a[href],
+label[for],
+summary,
+select,
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"] {
+  cursor: not-allowed;
+}
