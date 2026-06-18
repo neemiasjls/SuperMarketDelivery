@@ -1,0 +1,93 @@
+// Prisma schema — Supermercado Braga
+// Persiste o que precisa sobreviver a reinícios: usuários, endereços e pedidos.
+// O catálogo de produtos permanece como dado estático (somente leitura) em src/data/products.ts.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  phone        String
+  cpf          String?
+  createdAt    DateTime  @default(now())
+
+  addresses    Address[]
+  orders       Order[]
+
+  @@map("users")
+}
+
+model Address {
+  id           String   @id @default(cuid())
+  userId       String
+  label        String   @default("Casa")
+  street       String
+  number       String
+  complement   String?
+  neighborhood String
+  city         String
+  state        String
+  zipCode      String
+  isDefault    Boolean  @default(false)
+
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("addresses")
+}
+
+model Order {
+  id            String      @id
+  userId        String
+  subtotal      Float
+  discount      Float
+  deliveryFee   Float
+  total         Float
+  status        OrderStatus @default(confirmed)
+  paymentMethod String
+  deliveryDate  String
+  deliveryTime  String
+  address       Json        // snapshot do endereço no momento da compra
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items         OrderItem[]
+
+  @@index([userId])
+  @@map("orders")
+}
+
+model OrderItem {
+  id           String @id @default(cuid())
+  orderId      String
+  productId    String
+  productName  String
+  productImage String
+  price        Float
+  unit         String
+  quantity     Int
+
+  order        Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([orderId])
+  @@map("order_items")
+}
+
+enum OrderStatus {
+  pending
+  confirmed
+  preparing
+  delivering
+  delivered
+  cancelled
+}

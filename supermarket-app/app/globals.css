@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --brand:      #1565C0;
+  --brand-dark: #0d47a1;
+}
+
+/* ─── Base ─────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* ─── Text selection ───────────────────── */
+
+::selection {
+  background-color: #1565C0;
+  color: #ffffff;
+}
+
+/* ─── Focus rings ──────────────────────── */
+
+:focus-visible {
+  outline: 2px solid #1565C0;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Scrollbar utilities ──────────────── */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Smooth image transitions ─────────── */
+
+img {
+  transition: opacity 0.2s ease;
+}
+
+/* ─── Link transitions ─────────────────── */
+
+a {
+  transition-property: color, opacity, background-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}

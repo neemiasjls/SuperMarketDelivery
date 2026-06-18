@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Imagem do produto indisponível">
+  <rect width="200" height="200" fill="#f1f5f9"/>
+  <g fill="none" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M55 78h90l-8 62a8 8 0 0 1-8 7H71a8 8 0 0 1-8-7z"/>
+    <path d="M78 78a22 22 0 0 1 44 0"/>
+  </g>
+  <text x="100" y="170" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#94a3b8">Sem imagem</text>
+</svg>

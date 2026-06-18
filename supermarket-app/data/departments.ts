@@ -1,0 +1,125 @@
+import { Department } from '@/types'
+
+export const departments: Department[] = [
+  {
+    id: '1',
+    slug: 'hortifruti',
+    name: 'Hortifruti',
+    icon: '🥦',
+    categories: [
+      { id: '1-1', slug: 'frutas', name: 'Frutas', icon: '🍎', departmentSlug: 'hortifruti' },
+      { id: '1-2', slug: 'verduras', name: 'Verduras', icon: '🥬', departmentSlug: 'hortifruti' },
+      { id: '1-3', slug: 'legumes', name: 'Legumes', icon: '🥕', departmentSlug: 'hortifruti' },
+      { id: '1-4', slug: 'temperos', name: 'Temperos', icon: '🌿', departmentSlug: 'hortifruti' },
+    ],
+  },
+  {
+    id: '2',
+    slug: 'acougue',
+    name: 'Açougue',
+    icon: '🥩',
+    categories: [
+      { id: '2-1', slug: 'carnes-bovinas', name: 'Carnes Bovinas', icon: '🥩', departmentSlug: 'acougue' },
+      { id: '2-2', slug: 'carnes-suinas', name: 'Carnes Suínas', icon: '🐷', departmentSlug: 'acougue' },
+      { id: '2-3', slug: 'frango', name: 'Frango', icon: '🍗', departmentSlug: 'acougue' },
+      { id: '2-4', slug: 'linguicas', name: 'Linguiças', icon: '🌭', departmentSlug: 'acougue' },
+    ],
+  },
+  {
+    id: '3',
+    slug: 'padaria',
+    name: 'Padaria',
+    icon: '🍞',
+    categories: [
+      { id: '3-1', slug: 'paes', name: 'Pães', icon: '🍞', departmentSlug: 'padaria' },
+      { id: '3-2', slug: 'bolos', name: 'Bolos', icon: '🎂', departmentSlug: 'padaria' },
+      { id: '3-3', slug: 'salgados', name: 'Salgados', icon: '🥐', departmentSlug: 'padaria' },
+    ],
+  },
+  {
+    id: '4',
+    slug: 'laticinios',
+    name: 'Laticínios',
+    icon: '🥛',
+    categories: [
+      { id: '4-1', slug: 'leite', name: 'Leite', icon: '🥛', departmentSlug: 'laticinios' },
+      { id: '4-2', slug: 'queijos', name: 'Queijos', icon: '🧀', departmentSlug: 'laticinios' },
+      { id: '4-3', slug: 'iogurte', name: 'Iogurte', icon: '🍦', departmentSlug: 'laticinios' },
+      { id: '4-4', slug: 'manteiga', name: 'Manteiga e Margarina', icon: '🧈', departmentSlug: 'laticinios' },
+    ],
+  },
+  {
+    id: '5',
+    slug: 'bebidas',
+    name: 'Bebidas',
+    icon: '🥤',
+    categories: [
+      { id: '5-1', slug: 'refrigerantes', name: 'Refrigerantes', icon: '🥤', departmentSlug: 'bebidas' },
+      { id: '5-2', slug: 'sucos', name: 'Sucos', icon: '🍊', departmentSlug: 'bebidas' },
+      { id: '5-3', slug: 'aguas', name: 'Águas', icon: '💧', departmentSlug: 'bebidas' },
+      { id: '5-4', slug: 'cervejas', name: 'Cervejas', icon: '🍺', departmentSlug: 'bebidas' },
+      { id: '5-5', slug: 'energeticos', name: 'Energéticos', icon: '⚡', departmentSlug: 'bebidas' },
+    ],
+  },
+  {
+    id: '6',
+    slug: 'mercearia',
+    name: 'Mercearia',
+    icon: '🛒',
+    categories: [
+      { id: '6-1', slug: 'arroz-feijao', name: 'Arroz e Feijão', icon: '🍚', departmentSlug: 'mercearia' },
+      { id: '6-2', slug: 'massas', name: 'Massas', icon: '🍝', departmentSlug: 'mercearia' },
+      { id: '6-3', slug: 'oleos-vinagres', name: 'Óleos e Vinagres', icon: '🫙', departmentSlug: 'mercearia' },
+      { id: '6-4', slug: 'acucar-sal', name: 'Açúcar e Sal', icon: '🧂', departmentSlug: 'mercearia' },
+      { id: '6-5', slug: 'condimentos', name: 'Condimentos', icon: '🫙', departmentSlug: 'mercearia' },
+      { id: '6-6', slug: 'conservas', name: 'Conservas', icon: '🥫', departmentSlug: 'mercearia' },
+    ],
+  },
+  {
+    id: '7',
+    slug: 'limpeza',
+    name: 'Limpeza',
+    icon: '🧹',
+    categories: [
+      { id: '7-1', slug: 'detergentes', name: 'Detergentes', icon: '🧴', departmentSlug: 'limpeza' },
+      { id: '7-2', slug: 'desinfetantes', name: 'Desinfetantes', icon: '🧼', departmentSlug: 'limpeza' },
+      { id: '7-3', slug: 'sabao-po', name: 'Sabão em Pó', icon: '🧺', departmentSlug: 'limpeza' },
+      { id: '7-4', slug: 'papel-higienico', name: 'Papel Higiênico', icon: '🧻', departmentSlug: 'limpeza' },
+    ],
+  },
+  {
+    id: '8',
+    slug: 'higiene',
+    name: 'Higiene e Beleza',
+    icon: '🧴',
+    categories: [
+      { id: '8-1', slug: 'sabonetes', name: 'Sabonetes', icon: '🧼', departmentSlug: 'higiene' },
+      { id: '8-2', slug: 'shampoo', name: 'Shampoo e Condicionador', icon: '💆', departmentSlug: 'higiene' },
+      { id: '8-3', slug: 'creme-dental', name: 'Creme Dental', icon: '🦷', departmentSlug: 'higiene' },
+      { id: '8-4', slug: 'desodorante', name: 'Desodorante', icon: '✨', departmentSlug: 'higiene' },
+    ],
+  },
+  {
+    id: '9',
+    slug: 'congelados',
+    name: 'Congelados',
+    icon: '🧊',
+    categories: [
+      { id: '9-1', slug: 'sorvetes', name: 'Sorvetes', icon: '🍦', departmentSlug: 'congelados' },
+      { id: '9-2', slug: 'pizzas-pratos', name: 'Pizzas e Pratos Prontos', icon: '🍕', departmentSlug: 'congelados' },
+      { id: '9-3', slug: 'peixes-frutos-mar', name: 'Peixes e Frutos do Mar', icon: '🐟', departmentSlug: 'congelados' },
+    ],
+  },
+  {
+    id: '10',
+    slug: 'snacks',
+    name: 'Snacks e Doces',
+    icon: '🍫',
+    categories: [
+      { id: '10-1', slug: 'biscoitos', name: 'Biscoitos', icon: '🍪', departmentSlug: 'snacks' },
+      { id: '10-2', slug: 'chocolates', name: 'Chocolates', icon: '🍫', departmentSlug: 'snacks' },
+      { id: '10-3', slug: 'balas-gomas', name: 'Balas e Gomas', icon: '🍬', departmentSlug: 'snacks' },
+      { id: '10-4', slug: 'salgadinhos', name: 'Salgadinhos', icon: '🍿', departmentSlug: 'snacks' },
+    ],
+  },
+]

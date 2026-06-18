@@ -1,0 +1,18 @@
+{
+  "name": "supermarket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --names \"BACK,FRONT\" --prefix-colors \"yellow,cyan\" \"npm run dev --prefix backend\" \"npm run dev --prefix supermarket-app\"",
+    "dev:back": "npm run dev --prefix backend",
+    "dev:front": "npm run dev --prefix supermarket-app",
+    "build": "npm run build --prefix backend && npm run build --prefix supermarket-app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
