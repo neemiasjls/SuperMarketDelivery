@@ -49,7 +49,7 @@ SuperMarket/
 │   ├── store/                # Zustand (cart, auth)
 │   └── lib/                  # api.ts (cliente HTTP), utils.ts
 ├── docker-compose.yml        # Container do PostgreSQL
-├── iniciar.bat / parar.bat   # Atalhos para subir/parar tudo no Windows
+├── start.ps1 / stop.ps1      # Atalhos para subir/parar tudo (PowerShell)
 └── package.json              # Scripts que orquestram back + front
 ```
 
@@ -96,7 +96,7 @@ npm run dev                 # sobe backend (5002) + frontend (5175)
 
 Acesse **http://localhost:5175**.
 
-> **Windows:** depois do setup inicial, dá para usar `iniciar.bat` (sobe banco + back + front) e `parar.bat` (encerra tudo, inclusive o container).
+> **Windows (atalho):** depois do setup inicial, use `.\start.ps1` (sobe banco + back + front em segundo plano e abre o navegador) e `.\stop.ps1` (encerra tudo, inclusive o container).
 
 ---
 
